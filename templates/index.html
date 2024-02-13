@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+}
+
+.form-container {
+  width: 300px;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+    <div class="form-container">
+      <form id="animated-form" method="post" action="/predict">
+        <input type="text" id="sl" name="sl" placeholder="Enter Sepal Length">
+        <input type="text" id="sw" name="sw" placeholder="Enter Sepal Width">
+        <input type="text" id="pl" name="pl" placeholder="Enter Petal Length">
+        <input type="text" id="pw" name="pw" placeholder="Enter Petal Width">
+        <h5>Class : {{ result }}</h5>
+        <button type="submit">Classify</button>
+      </form>
+    </div>
+    
+  </body>
+  </html>
